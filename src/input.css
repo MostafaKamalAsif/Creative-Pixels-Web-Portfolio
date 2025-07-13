@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme { 
+    /* container start  */
+     --spacing-lgcontainer: 1280px;
+      --spacing-smcontainer: 600px;
+       --spacing-mdcontainer: 700px;
+     /* container End  */
+     /* font family start */
+     --font-Plus: "Plus Jakarta Sans", "sans-serif";
+     /* font family start */
+     /* color start  */
+         --color-Hcolor: #D9D9D9;
+     /* color color  */
+     }
