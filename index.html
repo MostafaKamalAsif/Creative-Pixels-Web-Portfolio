@@ -16,43 +16,86 @@
   </head>
   <body>
     <!-- Header part Start  -->
-    <section class="font-Plus bg-Hcolor py-6">
-      <div class="max-w-lgcontainer m-auto navbar">
+    <section class="font-Plus bg-black lg:bg-Hcolor py-6">
+      <div
+        class="max-w-smcontainer md:max-w-mdcontainer lg:max-w-lgcontainer ms-auto lg:m-auto navbar px-4"
+      >
+        <!-- Left: Logo -->
         <div class="navbar-start">
-          <div class="dropdown">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn bg-black/50 stroke-white border-black/50 lg:hidden"
+          <a href="#">
+            <img src="images/Group 15.svg" alt="Logo" class="hidden lg:block" />
+            <img src="images/logo-sm.png" alt="Logo" class="block lg:hidden" />
+          </a>
+        </div>
+
+        <!-- Right: Mobile Menu -->
+        <div class="navbar-end lg:hidden">
+          <div class="relative">
+            <button
+              id="mobileMenuBtn"
+              class="btn btn-ghost btn-square text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                class="h-6 w-6"
+                fill="none"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
+                  d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </div>
+            </button>
+
+            <!-- Dropdown Menu -->
             <ul
-              tabindex="0"
-              class="text-black dropdown-content rounded-box z-1 mt-2 w-52 p-2 shadow"
+              id="mobileMenu"
+              class="absolute top-[70px] right-0 mt-2 z-50 hidden bg-transparent text-black rounded-lg w-52 shadow-lg p-2 space-y-2"
             >
-              <li><a href="#" class="text-[18px]">Home</a></li>
-              <li><a href="#" class="text-[18px]">Services</a></li>
-              <li><a href="#" class="text-[18px]">Projects</a></li>
-              <li><a href="#" class="text-[18px]">Contact</a></li>
-              <li><a href="#" class="text-[18px]">About</a></li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-[18px] px-3 py-2 rounded hover:bg-gray-100"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-[18px] px-3 py-2 rounded hover:bg-gray-100"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-[18px] px-3 py-2 rounded hover:bg-gray-100"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-[18px] px-3 py-2 rounded hover:bg-gray-100"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block text-[18px] px-3 py-2 rounded hover:bg-gray-100"
+                  >About</a
+                >
+              </li>
             </ul>
           </div>
-          <a href="#" class="pl-1"
-            ><img src="images/Group 15.svg" alt="Group 15.svg"
-          /></a>
         </div>
+
+        <!-- Right: Desktop Nav -->
         <div class="navbar-end hidden lg:flex">
           <ul class="text-white gap-x-13 menu-horizontal px-1">
             <li><a href="#" class="text-[18px]">Home</a></li>
@@ -67,26 +110,46 @@
     <!-- Header Part End  -->
 
     <!-- Banner part Start  -->
-    <section class="bg-Hcolor font-Plus pt-14 pb-15">
+    <section
+      class="bg-Hcolor font-Plus px-6 lg:px-0 py-[49px] lg:pt-14 lg:pb-15"
+    >
       <div
         class="max-w-smcontainer md:max-w-mdcontainer lg:max-w-lgcontainer m-auto"
       >
         <div class="">
-          <h1 class="uppercase text-[120px] font-extrabold text-white">
+          <h1
+            class="uppercase text-[120px] font-extrabold text-white hidden lg:block"
+          >
             axell Smith
           </h1>
-          <h3 class="text-white text-[32px] font-bold pt-5 pb-[207px]">
+          <h1
+            class="uppercase text-[30px] md:text-[60px] w-[342px] md:w-full font-bold text-white block lg:hidden"
+          >
+            Maxwell Smith
+          </h1>
+          <p
+            class="text-[12px] text-white leading-[19px] pt-[58px] w-[342px]  block md:hidden lg:hidden"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            porttitor sed mi a accumsan. Vestibulum dictum congue tellus at
+            mollis. Nunc quam quam, sagittis ac feugiat eu, venenatis sed
+            sapien. Fusce interdum dapibus velit et rutrum In sed magna nec.
+          </p>
+          <h3
+            class="text-white text-7 lg:text-[32px] font-bold pt-5 pb-[150px] lg:pb-[207px] hidden md:block lg:block"
+          >
             Professional Software Engineer
           </h3>
         </div>
-        <div class="flex justify-between">
-          <div class="w-[45%]">
+        <div class="hidden md:block lg:block">
+        <div class="flex justify-between ">
+          <div class="w-[40%] lg:w-[45%] ">
             <div class="flex gap-x-7">
               <div class="">
                 <a href="#"
                   ><img
                     src="images/arrow.png "
-                    class="py-[29px] px-[29px] bg-black rounded-full"
+                    class="p-6 lg:py-[29px] lg:px-[29px] bg-black rounded-full"
                     alt="arrow.png"
                 /></a>
               </div>
@@ -94,7 +157,7 @@
                 <a href="#"
                   ><img
                     src="images/arrow.png "
-                    class="py-[29px] px-[29px] bg-black rounded-full"
+                    class="p-6 lg:py-[29px] lg:px-[29px] bg-black rounded-full"
                     alt="arrow.png"
                 /></a>
               </div>
@@ -102,21 +165,22 @@
                 <a href="#"
                   ><img
                     src="images/arrow.png "
-                    class="py-[29px] px-[29px] bg-black rounded-full"
+                    class="p-6 lg:py-[29px] lg:px-[29px] bg-black rounded-full"
                     alt="arrow.png"
                 /></a>
               </div>
             </div>
           </div>
-          <div class="w-[39%]">
+          <div class= "w-[45%] lg:w-[39%]">
             <h3 class="font-bold text-white text-[18px]">ABOUT ME</h3>
-            <p class="text-[18px] text-white leading-[29px] pt-5">
+            <p class="text-[16px] lg:text-[18px] w-[342px] lg:w-full text-white leading-[29px] pt-5">
               Lorem ipsum dolor sit amet, consectetur adipis cing elit. Donec
               porttitor sed mi a accumsan. Vestibulum dictum congue tellus at
               mollis. Nunc quam quam, sagittis ac feugiat eu, venenatis seas.
                Sed lobortis lectus ut augue.
             </p>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -387,7 +451,7 @@
     </section>
     <!-- Contact Us Part End  -->
 
-     <!-- Content part Start  -->
+    <!-- Content part Start  -->
     <section class="bg-black font-Plus">
       <div
         class="max-w-smcontainer md:max-w-mdcontainer lg:max-w-lgcontainer m-auto"
@@ -423,67 +487,112 @@
           </div>
 
           <div class="w-[45%]">
-          <div class="flex justify-between">
-            <div class="w-[45%]">
-              <div class="flex justify-between">
-                <div class="w-[48%]">
-                  <h3 class="text-white text-[16px] font-bold pb-4">Column One</h3>
-                  <ul>
-                    <li><a href="#" class="text-white text-[14px]">Link One</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Two</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Three</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Four</a></li>
-                  </ul>
-                </div>
+            <div class="flex justify-between">
+              <div class="w-[45%]">
+                <div class="flex justify-between">
                   <div class="w-[48%]">
-                  <h3 class="text-white text-[16px] font-bold pb-4">Column Two</h3>
-                  <ul>
-                    <li><a href="#" class="text-white text-[14px]">Link One</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Two</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Three</a></li>
-                    <li><a href="#" class="text-white text-[14px]">Link Four</a></li>
-                  </ul>
+                    <h3 class="text-white text-[16px] font-bold pb-4">
+                      Column One
+                    </h3>
+                    <ul>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link One</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link Two</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]"
+                          >Link Three</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link Four</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-[48%]">
+                    <h3 class="text-white text-[16px] font-bold pb-4">
+                      Column Two
+                    </h3>
+                    <ul>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link One</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link Two</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]"
+                          >Link Three</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="text-white text-[14px]">Link Four</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
 
-
-            <div class="w-[18%]">
-              <h3 class="text-white text-[16px] font-bold pb-4">Follow Us</h3>
-             <ul>
-              <li><a href="#" class="text-white text-[14px]"> <i class="fa-brands fa-facebook-f pr-2"></i> Facebook</a></li>
-              <li><a href="#" class="text-white text-[14px]"> <i class="fa-brands fa-instagram pr-2"></i> Instagram</a></li>
-              <li><a href="#" class="text-white text-[14px]"> <i class="fa-brands fa-twitter pr-2"></i> Twitter</a></li>
-              <li><a href="#" class="text-white text-[14px]"> <i class="fa-brands fa-linkedin pr-2"></i>  LinkedIn</a></li>
-             </ul>
+              <div class="w-[18%]">
+                <h3 class="text-white text-[16px] font-bold pb-4">Follow Us</h3>
+                <ul>
+                  <li>
+                    <a href="#" class="text-white text-[14px]">
+                      <i class="fa-brands fa-facebook-f pr-2"></i> Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white text-[14px]">
+                      <i class="fa-brands fa-instagram pr-2"></i> Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white text-[14px]">
+                      <i class="fa-brands fa-twitter pr-2"></i> Twitter</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-white text-[14px]">
+                      <i class="fa-brands fa-linkedin pr-2"></i> LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-        
       </div>
     </section>
     <!-- Content part End  -->
 
     <!-- Footer part Start  -->
-     <section class="bg-black pb-10  ">
-      <hr class="border-[#BBBBBB]">
-      <div class="max-w-smcontainer md:max-w-mdcontainer lg:max-w-lgcontainer m-auto">
-        <div class="flex justify-between  pt-[41px]">
+    <section class="bg-black pb-10">
+      <hr class="border-[#BBBBBB]" />
+      <div
+        class="max-w-smcontainer md:max-w-mdcontainer lg:max-w-lgcontainer m-auto"
+      >
+        <div class="flex justify-between pt-[41px]">
           <div class="w-[20%]">
             <h3 class="text-white text-[14px]">©2022, All right reserved.</h3>
           </div>
-          <div class="w-[27%] ">
+          <div class="w-[27%]">
             <ul class="flex gap-x-6">
-              <li><a href="#"  class="text-white text-[14px]">Privacy Policy</a></li>
-              <li><a href="#"  class="text-white text-[14px]">Terms of Service</a></li>
-              <li><a href="#"  class="text-white text-[14px]">Cookies Settings</a></li>
+              <li>
+                <a href="#" class="text-white text-[14px]">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-[14px]">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-[14px]">Cookies Settings</a>
+              </li>
             </ul>
           </div>
         </div>
-
       </div>
-     </section>
+    </section>
     <!-- Footer Part End  -->
     <script src="js/script.js"></script>
   </body>
